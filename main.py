@@ -1,7 +1,7 @@
 from locker.locker import Locker
     
 def main():
-    locker = Locker("COM5", 19200, 3)
+    locker = Locker("/dev/bus/usb/002/009", 19200, 3)
     locker.fetch_status()
     print(locker.get_status())
     locker.open_door(1)
